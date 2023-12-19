@@ -17,8 +17,11 @@ libs = ["raylib", "opengl32", "gdi32", "winmm"]
 
 [deps.raylib.windows]
 build = [
-    "git clone --depth 1 https://github.com/raysan5/raylib.git ./",
-    "cd src & make PLATFORM=PLATFORM_DESKTOP",
+    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_win64_mingw-w64.zip -O raylib.zip",
+    "tar -xf raylib.zip -C ./",
+    "mv raylib-5.0_win64_mingw-w64/* ./",
+    "rm -rf raylib-5.0_win64_mingw-w64",
+    "rm raylib.zip",
 ]
-includes = ["src"]
-libdirs = ["src"]
+includes = ["include"]
+libdirs = ["lib"]
