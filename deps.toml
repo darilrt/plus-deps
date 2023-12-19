@@ -25,3 +25,10 @@ build = [
 ]
 includes = ["include"]
 libdirs = ["lib"]
+
+[deps.opengl.windows]
+libs = ["opengl32", "glu32"]
+[deps.opengl.linux]
+libs = ["GL", "GLU"]
+[deps.opengl.osx]
+libs = ["OpenGL", "GLU"]
