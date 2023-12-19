@@ -4,13 +4,13 @@ defines = ["SDL_MAIN_HANDLED"]
 
 [deps.sdl2.windows]
 build = [
-    "wget https://www.libsdl.org/release/SDL2-devel-2.0.12-mingw.tar.gz -O sdl2.tar.gz",
+    "wget https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/SDL2-devel-2.28.5-mingw.tar.gz -O sdl2.tar.gz",
     "tar -xf sdl2.tar.gz",
     "rm sdl2.tar.gz",
 ]
-includes = ["SDL2-2.0.12/x86_64-w64-mingw32/include"]
-libdirs = ["SDL2-2.0.12/x86_64-w64-mingw32/lib"]
-binaries = ["SDL2-2.0.12/x86_64-w64-mingw32/bin/SDL2.dll"]
+includes = ["SDL2-2.28.5/x86_64-w64-mingw32/include"]
+libdirs = ["SDL2-2.28.5/x86_64-w64-mingw32/lib"]
+binaries = ["SDL2-2.28.5/x86_64-w64-mingw32/bin/SDL2.dll"]
 
 [deps.raylib]
 libs = ["raylib", "opengl32", "gdi32", "winmm"]
