@@ -11,3 +11,14 @@ build = [
 includes = ["SDL2-2.0.12/x86_64-w64-mingw32/include"]
 libdirs = ["SDL2-2.0.12/x86_64-w64-mingw32/lib"]
 binaries = ["SDL2-2.0.12/x86_64-w64-mingw32/bin/SDL2.dll"]
+
+[deps.raylib]
+libs = ["raylib", "opengl32", "gdi32", "winmm"]
+
+[deps.raylib.windows]
+build = [
+    "git clone --depth 1 https://github.com/raysan5/raylib.git ./",
+    "cd src & make PLATFORM=PLATFORM_DESKTOP",
+]
+includes = ["src"]
+libdirs = ["src"]
