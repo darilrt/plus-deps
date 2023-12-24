@@ -36,3 +36,17 @@ libs = ["OpenGL", "GLU"]
 [deps.glm]
 build = [ "wget https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.7z -O glm.7z", "tar -xf glm.7z", "rm glm.7z",]
 includes = [ "glm",]
+
+[deps.bgfx-bx]
+git = "https://github.com/bkaradzic/bx.git"
+
+[deps.bx.windows]
+includes = ["include", "include/compat/mingw"]
+
+[deps.bgfx-bimg]
+git = "https://github.com/bkaradzic/bimg.git"
+includes = ["include"]
+
+[deps.bgfx]
+git = "https://github.com/darilrt/bgfx"
+build = ["plus install", "plus build"]
