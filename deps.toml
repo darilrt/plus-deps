@@ -40,7 +40,7 @@ includes = [ "glm",]
 [deps.bgfx-bx]
 git = "https://github.com/bkaradzic/bx.git"
 
-[deps.bx.windows]
+[deps.bgfx-bx.windows]
 includes = ["include", "include/compat/mingw"]
 
 [deps.bgfx-bimg]
