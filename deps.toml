@@ -50,3 +50,6 @@ includes = ["include"]
 [deps.bgfx]
 git = "https://github.com/darilrt/bgfx"
 build = ["plus install", "plus build"]
+includes = ["include"]
+libdirs = ["lib"]
+lib = ["bgfx", "bimg", "bx"]
