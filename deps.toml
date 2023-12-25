@@ -3,7 +3,7 @@ libs = ["SDL2", "SDL2main"]
 defines = ["SDL_MAIN_HANDLED"]
 
 [deps.sdl2.windows]
-build = [
+pre-build = [
     "wget https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/SDL2-devel-2.28.5-mingw.tar.gz -O sdl2.tar.gz",
     "tar -xf sdl2.tar.gz",
     "rm sdl2.tar.gz",
