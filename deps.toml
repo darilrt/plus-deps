@@ -15,9 +15,8 @@ binaries = ["SDL2-2.28.5/x86_64-w64-mingw32/bin/SDL2.dll"]
 [deps.raylib]
 libs = ["raylib", "opengl32", "gdi32", "winmm"]
 
-[deps.raylib.windows]
 build = [
-    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_win64_mingw-w64.zip -O raylib.zip",
+    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_macos.tar.gz -O rayilib.zip",
     "tar -xf raylib.zip -C ./",
     "mv raylib-5.0_win64_mingw-w64/* ./",
     "rm -rf raylib-5.0_win64_mingw-w64",
@@ -25,8 +24,10 @@ build = [
 ]
 includes = ["include"]
 libdirs = ["lib"]
+
+[deps.raylib.windows]
 build = [
-    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_macos.tar.gz -O rayilib.zip",
+    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_win64_mingw-w64.zip -O raylib.zip",
     "tar -xf raylib.zip -C ./",
     "mv raylib-5.0_win64_mingw-w64/* ./",
     "rm -rf raylib-5.0_win64_mingw-w64",
