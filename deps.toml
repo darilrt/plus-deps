@@ -26,7 +26,7 @@ build = [
 includes = ["include"]
 libdirs = ["lib"]
 
-[deps.raylib.darwin]
+[deps.raylib.osx]
 build = [
     "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_macos.tar.gz -O rayilib.zip",
     "tar -xf raylib.zip -C ./",
