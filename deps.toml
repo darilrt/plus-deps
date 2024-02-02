@@ -26,6 +26,17 @@ build = [
 includes = ["include"]
 libdirs = ["lib"]
 
+[deps.raylib.darwin]
+build = [
+    "wget https://github.com/raysan5/raylib/releases/download/5.0/raylib-5.0_macos.tar.gz -O rayilib.zip",
+    "tar -xf raylib.zip -C ./",
+    "mv raylib-5.0_win64_mingw-w64/* ./",
+    "rm -rf raylib-5.0_win64_mingw-w64",
+    "rm raylib.zip",
+]
+includes = ["include"]
+libdirs = ["lib"]
+
 [deps.opengl.windows]
 libs = ["opengl32", "glu32"]
 [deps.opengl.linux]
